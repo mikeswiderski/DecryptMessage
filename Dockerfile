@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 
 EXPOSE 80 
 
-CMD ["gunicorn", "--bind", "80", "workers", "3", "decryptMessage.wsgi"]
+CMD ["gunicorn", "--bind", "80", "--workers", "3", "decryptMessage.wsgi"]
