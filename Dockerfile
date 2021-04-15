@@ -1,11 +1,12 @@
 FROM python:3
 
-ENV PYTHONUNBUFFERED 1
-ENV PATH="/decryptMessage:${PATH}"
+ENV PATH="/decryptMessage/:${PATH}"
 RUN mkdir /decryptMessage
 WORKDIR /decryptMessage
 COPY . /decryptMessage/
 RUN pip install -r requirements.txt
+
+RUN chmod 755 /decryptMessage/run_tests.sh
 
 EXPOSE 80 
 
