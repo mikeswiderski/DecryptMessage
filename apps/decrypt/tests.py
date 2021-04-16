@@ -20,6 +20,9 @@ class DecryptTests(APITestCase):
         response = self.client.patch(self.decrypt, format='json')
         self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
 
+        response = self.client.delete(self.decrypt, format='json')
+        self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
+
     def test_webservice_can_dectrypt_message_when_correct_parameters_provided(self):
         data = {"passphrase": "topsecret",
                 "message": "-----BEGIN PGP MESSAGE-----\nVersion: GnuPG v2\n\njA0ECQMCVady3RUyJw3X0kcBF"\

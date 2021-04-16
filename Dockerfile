@@ -10,4 +10,4 @@ RUN chmod 755 /decryptMessage/run_tests.sh
 
 EXPOSE 80 
 
-CMD ["gunicorn", "--bind", "80", "decryptMessage.wsgi"]
+CMD ["gunicorn", "--bind", ":80", "decryptMessage.wsgi"]
