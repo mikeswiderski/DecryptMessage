@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class DecodeConfig(AppConfig):
+class DecryptConfig(AppConfig):
     name = 'decrypt'
